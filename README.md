@@ -1,4 +1,4 @@
-https://github.com/robinsonperez02/A-volar-Airline/blob/9a1b38c3775c720c1cde2cbc68db4c65fd038a96/A%20volar%20Airline.png
+![image alt].(https://github.com/robinsonperez02/A-volar-Airline/blob/9a1b38c3775c720c1cde2cbc68db4c65fd038a96/A%20volar%20Airline.png)
 Temática Proyecto Integrador: Gestión de reservas y venta de servicios de una aerolínea 
 
 Objetivo General
