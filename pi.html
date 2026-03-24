@@ -2,151 +2,220 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Volar Airline</title>
 
 <style>
-
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image:url("avion.jpg");
-    background-size:cover;
-    background-position:center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
 }
 
-/* MENU */
-
-nav{
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 40px;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+}
+.navbar h2 {
+    color: purple;
+}
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+.btn-login {
+    background: purple;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
 }
 
-.logo{
-    color:#7a4cc2;
-    font-weight:bold;
-    font-size:18px;
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92') no-repeat center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+.hero h1 {
+    font-size: 40px;
+}
+.search-box {
+    background: rgba(255,255,255,0.9);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 60%;
+}
+.search-box input {
+    margin: 5px;
+    padding: 8px;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:40px;
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: white;
+}
+.feature {
+    text-align: center;
 }
 
-nav ul li{
-    cursor:pointer;
+/* SECTION */
+.section {
+    background: linear-gradient(180deg, #a88df5, #ffffff);
+    padding: 40px;
+}
+.section h1 {
+    color: white;
+    font-size: 40px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.card p {
+    padding: 10px;
 }
 
-nav ul li:hover{
-    color:#7a4cc2;
+/* FOOTER */
+.footer {
+    background: #6c4bcf;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
 }
-
-/* FORMULARIO */
-
-.container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80vh;
-}
-
-.login-box{
-    background:#f5f5f5;
-    padding:30px;
-    width:320px;
-    border-radius:12px;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.4);
-    border:2px solid black;
-}
-
-.login-box h2{
-    text-align:center;
-    color:#6f42c1;
-}
-
-.login-box label{
-    font-size:14px;
-}
-
-.login-box input{
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    margin-bottom:15px;
-    border-radius:20px;
-    border:1px solid gray;
-}
-
-.login-box button{
-    width:100%;
-    padding:10px;
-    background:#7a4cc2;
-    color:white;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
-}
-
-.login-box button:hover{
-    background:#5e36a3;
-}
-
-.registro{
-    font-size:13px;
-}
-
-.registro a{
-    color:#7a4cc2;
-    text-decoration:none;
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-<nav>
-
-<div class="logo">A Volar Airline</div>
-
-<ul>
-<li>Destinos</li>
-<li>Ofertas</li>
-<li>Check-in</li>
-<li>Mi cuenta</li>
-</ul>
-
-</nav>
-
-
-<div class="container">
-
-<div class="login-box">
-
-<h2>Iniciar sesión en su cuenta</h2>
-
-<p class="registro">
-¿no eres miembro de A Volar?
-<a href="#">Únete ahora</a>
-</p>
-
-<label>correo electronico</label>
-<input type="email">
-
-<label>contraseña</label>
-<input type="password">
-
-<button>Iniciar sesión</button>
-
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>A Volar Airline</h2>
+    <div class="nav-links">
+        <a href="#">Destinos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Check-in</a>
+        <a href="#">Mi cuenta</a>
+        <a href="#" class="btn-login">Iniciar Sesión</a>
+    </div>
 </div>
 
+<!-- HERO -->
+<div class="hero">
+    <h1>Descubre el mundo con nosotros</h1>
+    <p>Encuentra los mejores vuelos a los destinos más increíbles</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Ciudad de origen">
+        <input type="text" placeholder="Ciudad de destino">
+        <input type="date">
+        <input type="date">
+        <button>Buscar</button>
+    </div>
 </div>
 
+<!-- FEATURES -->
+<div class="features">
+    <div class="feature">
+        <h3>Reserva segura</h3>
+        <p>Tus datos están protegidos</p>
+    </div>
+    <div class="feature">
+        <h3>Disponibilidad 24/7</h3>
+        <p>Reserva en cualquier momento</p>
+    </div>
+    <div class="feature">
+        <h3>Mejores precios</h3>
+        <p>Las tarifas más competitivas</p>
+    </div>
+    <div class="feature">
+        <h3>Soporte dedicado</h3>
+        <p>Siempre disponible</p>
+    </div>
+</div>
+
+<!-- SECTION -->
+<div class="section">
+    <h1>¡Descubre la diversidad de Colombia!</h1>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?bogota">
+            <p>Bogotá</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?medellin">
+            <p>Medellín</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?villavicencio">
+            <p>Villavicencio</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?bucaramanga">
+            <p>Bucaramanga</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?barranquilla">
+            <p>Barranquilla</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?cali">
+            <p>Cali</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?cucuta">
+            <p>Cúcuta</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/300x200/?san-andres">
+            <p>San Andrés</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div>
+        <h4>Descubre</h4>
+        <p>Inicio</p>
+        <p>Vuelos</p>
+    </div>
+    <div>
+        <h4>Información</h4>
+        <p>Políticas</p>
+        <p>Términos</p>
+    </div>
+    <div>
+        <h4>Contacto</h4>
+        <p>Servicio al cliente</p>
+    </div>
+</div>
 
 </body>
 </html>
