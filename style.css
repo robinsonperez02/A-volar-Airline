@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center; /* Centra la imagen y el texto verticalmente */
+    gap: 10px;           /* Crea un espacio entre la imagen y el texto */
+}
+
+/* Ajuste del tamaño de la imagen */
+.logo-img {
+    height: 40px;        /* Controlamos el largo (altura) de la imagen */
+    width: auto;         /* El ancho se ajusta automáticamente para no deformar */
+    object-fit: contain; /* Asegura que la imagen quepa bien en su espacio */
+}
+
+/* Opcional: Ajuste de la navbar para que todo fluya bien */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.airline-name {
+    color: #5d48a3;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background:  url('imafondo.png');
+    height: 680px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    /* Esta es la propiedad clave: */
+    background-size: 100%; /* Reduce la imagen de fondo al 80% de su tamaño original */
+    
+    background-repeat: no-repeat; /* Evita que la imagen se repita al achicarse */
+    background-position: top right; /* Acomoda la imagen más pequeña arriba a la derecha */
+}
+
+
+.hero-content {
+    color: white;
+    max-width: 550px;
+}
+
+.label {
+    font-family: 'Secular One', sans-serif; /* Montserrat es ideal para estos textos pequeños */
+    font-size: 1rem;       /* Tamaño pequeño y elegante */
+    font-weight: 400;      /* Esto le quita lo grueso (el "bold") */
+    letter-spacing: 1px;   /* Un poco de espacio entre letras lo hace ver más moderno */
+    color: rgba(255, 255, 255, 0.9); /* Un blanco ligeramente transparente lo suaviza visualmente */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* El título con Secular One y tamaño 64 */
+.main-title {
+    font-family: 'Secular One', sans-serif;
+    font-size: 34px;
+    /* Bajamos el peso al mínimo que permite la fuente */
+    font-weight: 400; 
+    /* El interlineado ayuda a que no se vea tan pesado visualmente */
+    line-height: 1.0; 
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: white;
+    /* Suavizamos los bordes de la letra para que se vea más fina */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* La línea blanca ajustada */
+.line {
+    width: 220px;       /* Más larga para equilibrar los 64px del texto */
+    height: 4px;        /* Un poquito más gruesa */
+    background: white;
+    margin-bottom: 35px; /* Espacio antes de la descripción */
+    border-radius: 2px;  /* Puntas suavemente redondeadas */
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif; /* Montserrat tiene pesos muy delgados */
+    font-size: 1.1rem;      /* Tamaño legible pero no gigante */
+    font-weight: 300;       /* Este es el truco: 300 es "Light", lo hace ver muy fino */
+    line-height: 1.5;       /* Da aire entre las líneas para que sea fácil de leer */
+    color: rgba(255, 255, 255, 0.85); /* Un blanco al 85% lo hace ver más suave y elegante */
+    margin-bottom: 30px;
+    max-width: 450px;       /* Evita que el texto sea demasiado largo hacia la derecha */
+}
+
+/* Formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+}
+
+.input-field {
+    padding: 18px 25px;
+    border-radius: 20px;
+    border: none;
+    background: #e5e7eb;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.btn-buscar {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #5d48a3;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;8F00B9
+    margin-top: 10px;
+    width: 200px;
+}
+
+/* Footer */
+.footer {
+    background-color: #846BD2;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    text-decoration: underline;
+    font-size: 1rem;
+    color: black;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #7c3aed;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
