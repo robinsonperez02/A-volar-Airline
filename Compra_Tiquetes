@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ofertas de Viaje</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin:0;
+        background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+    header{
+        background:white;
+        padding:10px 40px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-bottom:2px solid #ddd;
+    }
+
+    header h1{
+        color:#6c2bd9;
+    }
+
+    nav a{
+        margin:0 10px;
+        text-decoration:none;
+        color:#333;
+        font-weight:bold;
+    }
+
+    /* BUSCADOR */
+    .search-box{
+        background:white;
+        width:80%;
+        margin:20px auto;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .search-box input{
+        padding:10px;
+        border-radius:5px;
+        border:1px solid #ccc;
+    }
+
+    .search-box button{
+        background:#6c2bd9;
+        color:white;
+        border:none;
+        padding:10px 20px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    /* TITULO */
+    .title{
+        text-align:center;
+        color:#6c2bd9;
+        margin:20px;
+    }
+
+    /* TARJETAS */
+    .cards{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap:20px;
+        padding:20px;
+    }
+
+    .card{
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+        width:100%;
+        height:150px;
+        object-fit:cover;
+    }
+
+    .card-content{
+        padding:15px;
+    }
+
+    .card h3{
+        margin:5px 0;
+    }
+
+    .price{
+        background:#e0d4ff;
+        color:#333;
+        padding:8px;
+        border-radius:8px;
+        text-align:center;
+        margin-top:10px;
+        font-weight:bold;
+    }
+
+    /* FOOTER */
+    footer{
+        background:#6c2bd9;
+        color:white;
+        padding:20px;
+        text-align:center;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AVIANCA</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Mis viajes</a>
+        <a href="#">Promociones</a>
+    </nav>
+</header>
+
+<div class="search-box">
+    <input type="text" placeholder="Origen">
+    <input type="text" placeholder="Destino">
+    <input type="date">
+    <input type="date">
+    <input type="number" placeholder="Pasajeros">
+    <button>Buscar</button>
+</div>
+
+<h2 class="title">Las mejores ofertas las encuentras AQUÍ</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?cartagena" alt="">
+        <div class="card-content">
+            <h3>Cartagena</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $110.000</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?bogota" alt="">
+        <div class="card-content">
+            <h3>Bogotá</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $80.000</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?pasto" alt="">
+        <div class="card-content">
+            <h3>Pasto</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $50.000</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?soacha" alt="">
+        <div class="card-content">
+            <h3>Soacha</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $40.000</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?tulua" alt="">
+        <div class="card-content">
+            <h3>Tuluá</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $90.000</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/400x300/?bucaramanga" alt="">
+        <div class="card-content">
+            <h3>Bucaramanga</h3>
+            <p>Por trayecto desde</p>
+            <div class="price">COP $80.000</div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 - Agencia de Viajes</p>
+</footer>
+
+</body>
+</html>
