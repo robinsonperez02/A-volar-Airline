@@ -4,27 +4,52 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
 body {
     background-color: #f4f0ff;
     color: #333;
 }
+/* Header */
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
 
-/* NAVBAR */
+/* Ajuste del tamaño de la imagen */
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    object-fit: contain; 
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 5%;
-    background: white;
     align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+.airline-name {
+    color: #5d48a3;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
-.logo { 
-    color: #5d48a3; 
-    font-weight: bold; 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+   
 }
 
-.nav-links { display: flex; list-style: none; gap: 20px; font-size: 0.8rem; }
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
 
 /* CONTAINER */
 .container { width: 90%; max-width: 1100px; margin: 20px auto; }
@@ -44,15 +69,15 @@ body {
 
 /* Alineación Horizontal de los Inputs */
 .search-grid {
-    display: flex; /* Pone todo en fila */
-    flex-wrap: nowrap; /* Evita que se bajen a la siguiente línea */
-    gap: 15px; /* Espacio entre cada campo */
-    align-items: flex-end; /* Alinea el botón con los inputs */
+    display: flex; 
+    flex-wrap: nowrap; 
+    gap: 15px; 
+    align-items: flex-end; 
 }
 
 /* Ajuste de cada grupo (Label + Input) */
 .input-group {
-    flex: 1; /* Hace que todos los inputs midan lo mismo */
+    flex: 1; 
     min-width: 120px;
 }
 
@@ -69,11 +94,11 @@ body {
     padding: 12px;
     border: none;
     border-radius: 12px;
-    background: white; /* El input debe ser blanco sólido para resaltar */
+    background: white; 
     font-size: 0.9rem;
 }
 
-/* Estilo de los Botones de Arriba con Hover */
+/* Estilo de los botones de Arriba con hover */
 .tabs-container {
     display: flex;
     gap: 10px;
@@ -91,7 +116,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* EL EFECTO HOVER QUE PEDISTE */
+
 .tab-btn:hover {
     background: #5d48a3 !important; /* Cambia a morado al pasar el mouse */
     color: white !important;
@@ -160,7 +185,7 @@ h3 {
     margin: 40px auto;
 }
 
-/* Título según la imagen e4fbb3 */
+
 .section-title {
     font-family: 'Montserrat', sans-serif;
     color: #5d48a3;
@@ -172,7 +197,7 @@ h3 {
 
 .section-title .thin {
     font-weight: 300;
-    color: #888; /* Gris más claro para 'Seleccionado' */
+    color: #888; /* Gris más claro para seleccionado */
 }
 
 /* Tarjeta Blanca */
@@ -204,7 +229,7 @@ h3 {
     color: #000;
 }
 
-/* Beneficios con color morado suave */
+/* color morado suave */
 .perk {
     display: inline-flex;
     align-items: center;
@@ -229,7 +254,6 @@ h3 {
 .plane-icon-detail {
     width: 150px;
     margin-bottom: 10px;
-    /* Si la imagen está un poco alta en la tarjeta: */
     margin-top: -20px; 
 }
 
@@ -285,7 +309,6 @@ input, select {
     cursor: pointer;
 }
 
-/* Footer */
 .footer {
     background-color: #846BD2;
     color: white;
