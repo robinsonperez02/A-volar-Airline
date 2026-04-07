@@ -5,145 +5,284 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Header */
-/* Contenedor del logo */
-.logo {
-    display: flex;
-    align-items: center; /* Centra la imagen y el texto verticalmente */
-    gap: 10px;           /* Crea un espacio entre la imagen y el texto */
+body {
+    background-color: #f4f0ff;
+    color: #333;
 }
 
-/* Ajuste del tamaño de la imagen */
-.logo-img {
-    height: 40px;        /* Controlamos el largo (altura) de la imagen */
-    width: auto;         /* El ancho se ajusta automáticamente para no deformar */
-    object-fit: contain; /* Asegura que la imagen quepa bien en su espacio */
-}
-
-/* Opcional: Ajuste de la navbar para que todo fluya bien */
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-.airline-name {
-    color: #5d48a3;
-    font-weight: 800;
-    font-size: 1.1rem;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4b5563;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Hero Section */
-.hero {
-    width: 100%;
-    height: 100vh;
-    background:  url('imafondo.png');
-    height: 680px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-    /* Esta es la propiedad clave: */
-    background-size: 100%; /* Reduce la imagen de fondo al 80% de su tamaño original */
-    
-    background-repeat: no-repeat; /* Evita que la imagen se repita al achicarse */
-    background-position: top right; /* Acomoda la imagen más pequeña arriba a la derecha */
-}
-
-
-.hero-content {
-    color: white;
-    max-width: 550px;
-}
-
-.label {
-    font-family: 'Secular One', sans-serif; /* Montserrat es ideal para estos textos pequeños */
-    font-size: 1rem;       /* Tamaño pequeño y elegante */
-    font-weight: 400;      /* Esto le quita lo grueso (el "bold") */
-    letter-spacing: 1px;   /* Un poco de espacio entre letras lo hace ver más moderno */
-    color: rgba(255, 255, 255, 0.9); /* Un blanco ligeramente transparente lo suaviza visualmente */
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* El título con Secular One y tamaño 64 */
-.main-title {
-    font-family: 'Secular One', sans-serif;
-    font-size: 34px;
-    /* Bajamos el peso al mínimo que permite la fuente */
-    font-weight: 400; 
-    /* El interlineado ayuda a que no se vea tan pesado visualmente */
-    line-height: 1.0; 
-    margin-top: 10px;
-    margin-bottom: 25px;
-    color: white;
-    /* Suavizamos los bordes de la letra para que se vea más fina */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* La línea blanca ajustada */
-.line {
-    width: 220px;       /* Más larga para equilibrar los 64px del texto */
-    height: 4px;        /* Un poquito más gruesa */
+    padding: 15px 5%;
     background: white;
-    margin-bottom: 35px; /* Espacio antes de la descripción */
-    border-radius: 2px;  /* Puntas suavemente redondeadas */
+    align-items: center;
 }
 
-.description {
-    font-family: 'Montserrat', sans-serif; /* Montserrat tiene pesos muy delgados */
-    font-size: 1.1rem;      /* Tamaño legible pero no gigante */
-    font-weight: 300;       /* Este es el truco: 300 es "Light", lo hace ver muy fino */
-    line-height: 1.5;       /* Da aire entre las líneas para que sea fácil de leer */
-    color: rgba(255, 255, 255, 0.85); /* Un blanco al 85% lo hace ver más suave y elegante */
-    margin-bottom: 30px;
-    max-width: 450px;       /* Evita que el texto sea demasiado largo hacia la derecha */
+.logo { 
+    color: #5d48a3; 
+    font-weight: bold; 
 }
 
-/* Formulario */
-.form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 320px;
+.nav-links { display: flex; list-style: none; gap: 20px; font-size: 0.8rem; }
+
+/* CONTAINER */
+.container { width: 90%; max-width: 1100px; margin: 20px auto; }
+
+
+/* Contenedor con Transparencia */
+.search-box {
+    background: rgba(255, 255, 255, 0.3) !important; /* Transparencia */
+    backdrop-filter: blur(15px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    max-width: 1200px;
+    margin: 50px auto;
 }
 
-.input-field {
-    padding: 18px 25px;
-    border-radius: 20px;
-    border: none;
-    background: #e5e7eb;
-    font-size: 1rem;
+/* Alineación Horizontal de los Inputs */
+.search-grid {
+    display: flex; /* Pone todo en fila */
+    flex-wrap: nowrap; /* Evita que se bajen a la siguiente línea */
+    gap: 15px; /* Espacio entre cada campo */
+    align-items: flex-end; /* Alinea el botón con los inputs */
+}
+
+/* Ajuste de cada grupo (Label + Input) */
+.input-group {
+    flex: 1; /* Hace que todos los inputs midan lo mismo */
+    min-width: 120px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #374151;
+    margin-bottom: 8px;
+    color: #1a1a1a;
 }
 
-.btn-buscar {
-    padding: 15px;
-    border-radius: 12px;
+.input-group input {
+    width: 100%;
+    padding: 12px;
     border: none;
+    border-radius: 12px;
+    background: white; /* El input debe ser blanco sólido para resaltar */
+    font-size: 0.9rem;
+}
+
+/* Estilo de los Botones de Arriba con Hover */
+.tabs-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparente */
+    color: #4b2c85;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* EL EFECTO HOVER QUE PEDISTE */
+.tab-btn:hover {
+    background: #5d48a3 !important; /* Cambia a morado al pasar el mouse */
+    color: white !important;
+}
+
+.tab-btn.active {
+    background: white;
+    color: black;
+}
+
+/* Botón Buscar */
+.btn-buscar-form {
     background: #5d48a3;
     color: white;
-    font-size: 1.1rem;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 45px; /* Altura igual a los inputs */
+}
+.btn-buscar-form:hover {
+    transform: scale(1.05);
+}
+
+/* TARJETAS */
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h3 { 
+    color: #5d48a3; 
+    margin-bottom: 15px; 
+    font-size: 1.2rem; }
+
+.flight-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tag { 
+    background: #f0f0f0; 
+    font-size: 0.7rem; 
+    padding: 3px 8px; 
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+/* LAYOUT COLUMNAS */
+.main-content-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+/* Estenedor principal */
+.flight-details-container {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Título según la imagen e4fbb3 */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #5d48a3;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+.section-title .thin {
+    font-weight: 300;
+    color: #888; /* Gris más claro para 'Seleccionado' */
+}
+
+/* Tarjeta Blanca */
+.flight-detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.route {
+    color: #1a1a4b;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.flight-timing {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.flight-timing strong {
+    color: #000;
+}
+
+/* Beneficios con color morado suave */
+.perk {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.perk-text {
+    font-size: 0.9rem;
+    color: #4b2c85;
     font-weight: 600;
-    cursor: pointer;8F00B9
+    margin-left: 8px;
+}
+
+/* Sección derecha (Avión y Botón) */
+.flight-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.plane-icon-detail {
+    width: 150px;
+    margin-bottom: 10px;
+    /* Si la imagen está un poco alta en la tarjeta: */
+    margin-top: -20px; 
+}
+
+.btn-continuar {
+    background: #5d48a3; 
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    
+    
+}
+
+.btn-continuar:hover {
+    transform: scale(1.03);
+}
+
+/* FORMULARIO */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.full-width { grid-column: span 2; }
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* SUMMARY & PAY */
+.summary-card img { width: 100%; border-radius: 15px 15px 0 0; }
+.summary-details { 
+    background: #5d48a3; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+
+.btn-pay {
+    width: 100%;
     margin-top: 10px;
-    width: 200px;
+    padding: 12px;
+    background: #a855f7;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 /* Footer */
