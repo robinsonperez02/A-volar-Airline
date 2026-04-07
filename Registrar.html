@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta property="og:title" content="exported project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Secular+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Secular+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Secular+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Secular+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="registrar-container1">
+        <div class="registrar-thq-registrar-elm">
+          <img
+            src="public/chatgptimage28feb202617353932445-19vg-200h.png"
+            alt="ChatGPTImage28feb202617353932445"
+            class="registrar-thq-chat-gpt-image28feb20261735393-elm"
+          />
+          <img
+            src="public/rectangle1012445-n09q.svg"
+            alt="Rectangle1012445"
+            class="registrar-thq-rectangle101-elm"
+          />
+          <span class="registrar-thq-text-elm10">Datos requeridos *</span>
+          <span class="registrar-thq-text-elm11">Primer nombre *</span>
+          <span class="registrar-thq-text-elm12">A volar Airline</span>
+          <span class="registrar-thq-text-elm13">Información personal</span>
+          <img
+            src="public/rectangle1022445-9rx-200h.png"
+            alt="Rectangle1022445"
+            class="registrar-thq-rectangle102-elm"
+          />
+          <span class="registrar-thq-text-elm14">Fecha de nacimiento *</span>
+          <img
+            src="public/rectangle1082449-1h1e-200h.png"
+            alt="Rectangle1082449"
+            class="registrar-thq-rectangle108-elm"
+          />
+          <span class="registrar-thq-text-elm15">Genero *</span>
+          <img
+            src="public/rectangle1092449-eqdr-200h.png"
+            alt="Rectangle1092449"
+            class="registrar-thq-rectangle109-elm"
+          />
+          <span class="registrar-thq-text-elm16">Segundo nombre</span>
+          <img
+            src="public/rectangle1062449-cjj3-200h.png"
+            alt="Rectangle1062449"
+            class="registrar-thq-rectangle106-elm"
+          />
+          <span class="registrar-thq-text-elm17">
+            <span class="registrar-thq-text-elm18">Apellidos</span>
+            <span>*</span>
+          </span>
+          <img
+            src="public/rectangle1072449-n29d-200h.png"
+            alt="Rectangle1072449"
+            class="registrar-thq-rectangle107-elm"
+          />
+          <img
+            src="public/rectangle1052445-i4hh-200h.png"
+            alt="Rectangle1052445"
+            class="registrar-thq-rectangle105-elm"
+          />
+          <span class="registrar-thq-text-elm20">Crear cuenta</span>
+          <div class="registrar-thq-frame56-elm">
+            <span class="registrar-thq-text-elm21">Selecciona tu genero</span>
+          </div>
+          <div class="registrar-thq-frame59-elm">
+            <div class="registrar-thq-frame60-elm">
+              <span class="registrar-thq-text-elm22">Selecciona tu genero</span>
+              <img
+                src="public/chevrondown2449-rjpa.svg"
+                alt="Chevrondown2449"
+                class="registrar-thq-chevrondown-elm1"
+              />
+            </div>
+          </div>
+          <img
+            src="public/rectangle1102449-vix.svg"
+            alt="Rectangle1102449"
+            class="registrar-thq-rectangle110-elm"
+          />
+          <span class="registrar-thq-text-elm23">Datos requeridos *</span>
+          <img
+            src="public/rectangle1162449-3mt3.svg"
+            alt="Rectangle1162449"
+            class="registrar-thq-rectangle116-elm"
+          />
+          <img
+            src="public/chatgptimage28feb202617353942449-uxezi-2000w.png"
+            alt="ChatGPTImage28feb202617353942449"
+            class="registrar-thq-chat-gpt-image28feb20261735394-elm"
+          />
+          <span class="registrar-thq-text-elm24">Pais *</span>
+          <span class="registrar-thq-text-elm25">Dirección</span>
+          <span class="registrar-thq-text-elm26">Dirección *</span>
+          <span class="registrar-thq-text-elm27">Código postal *</span>
+          <span class="registrar-thq-text-elm28">
+            <span class="registrar-thq-text-elm29">Ciudad</span>
+            <span>*</span>
+          </span>
+          <span class="registrar-thq-text-elm31">
+            <span class="registrar-thq-text-elm32">Estado/departamento</span>
+            <span>*</span>
+          </span>
+          <span class="registrar-thq-text-elm34">Datos requeridos *</span>
+          <span class="registrar-thq-text-elm35">Gmail *</span>
+          <span class="registrar-thq-text-elm36">Confirma Gmail *</span>
+          <span class="registrar-thq-text-elm37">Correo / Contacto</span>
+          <img
+            src="public/rectangle1172449-ful-200h.png"
+            alt="Rectangle1172449"
+            class="registrar-thq-rectangle117-elm"
+          />
+          <img
+            src="public/rectangle1112449-be32r-200h.png"
+            alt="Rectangle1112449"
+            class="registrar-thq-rectangle111-elm"
+          />
+          <img
+            src="public/rectangle1122449-djjn-200h.png"
+            alt="Rectangle1122449"
+            class="registrar-thq-rectangle112-elm"
+          />
+          <img
+            src="public/rectangle1222449-nvz3-200h.png"
+            alt="Rectangle1222449"
+            class="registrar-thq-rectangle122-elm"
+          />
+          <img
+            src="public/rectangle1142449-843-200h.png"
+            alt="Rectangle1142449"
+            class="registrar-thq-rectangle114-elm"
+          />
+          <img
+            src="public/rectangle1152449-pz73-200h.png"
+            alt="Rectangle1152449"
+            class="registrar-thq-rectangle115-elm"
+          />
+          <span class="registrar-thq-text-elm38">Numero Telefonico *</span>
+          <img
+            src="public/rectangle1182449-aupo-200h.png"
+            alt="Rectangle1182449"
+            class="registrar-thq-rectangle118-elm"
+          />
+          <span class="registrar-thq-text-elm39">
+            Numero Telefonico auxiliar*
+          </span>
+          <img
+            src="public/rectangle1232449-2dtc-200h.png"
+            alt="Rectangle1232449"
+            class="registrar-thq-rectangle123-elm"
+          />
+          <span class="registrar-thq-text-elm40">Código de tu pais *</span>
+          <img
+            src="public/rectangle1192449-e8e-200h.png"
+            alt="Rectangle1192449"
+            class="registrar-thq-rectangle119-elm"
+          />
+          <img
+            src="public/rectangle1202449-5jbt-200h.png"
+            alt="Rectangle1202449"
+            class="registrar-thq-rectangle120-elm"
+          />
+          <div class="registrar-thq-frame58-elm">
+            <span class="registrar-thq-text-elm41">Selecciona tu codigo</span>
+          </div>
+          <img
+            src="public/chevrondown2449-okm.svg"
+            alt="Chevrondown2449"
+            class="registrar-thq-chevrondown-elm2"
+          />
+          <div class="registrar-thq-frame61-elm">
+            <span class="registrar-thq-text-elm42">Selecciona tu pais</span>
+            <img
+              src="public/chevrondown2449-9v6.svg"
+              alt="Chevrondown2449"
+              class="registrar-thq-chevrondown-elm3"
+            />
+          </div>
+          <div class="registrar-thq-correo-elm"></div>
+          <span class="registrar-thq-text-elm43">
+            He leído y acepto los Términos y Condiciones&nbsp;así como
+            la&nbsp;Política de Privacidad&nbsp;de este sitio. Declaro ser mayor
+            de edad y contar con la capacidad legal para aceptar estos términos.
+          </span>
+          <div class="registrar-thq-frame169-elm">
+            <div class="registrar-thq-frame95-elm1">
+              <div class="registrar-thq-frame97-elm1">
+                <img
+                  src="public/line12522-3gks.svg"
+                  alt="Line12522"
+                  class="registrar-thq-line1-elm1"
+                />
+                <img
+                  src="public/line52522-acno.svg"
+                  alt="Line52522"
+                  class="registrar-thq-line5-elm1"
+                />
+                <img
+                  src="public/line42522-s18.svg"
+                  alt="Line42522"
+                  class="registrar-thq-line4-elm1"
+                />
+                <div class="registrar-thq-frame95-elm2">
+                  <img
+                    src="public/line22522-l6iq.svg"
+                    alt="Line22522"
+                    class="registrar-thq-line2-elm1"
+                  />
+                  <span class="registrar-thq-text-elm44">
+                    Información Legal
+                  </span>
+                </div>
+                <div class="registrar-thq-frame96-elm1">
+                  <img
+                    src="public/line32522-doro.svg"
+                    alt="Line32522"
+                    class="registrar-thq-line3-elm1"
+                  />
+                  <span class="registrar-thq-text-elm45">Nosotros</span>
+                </div>
+                <div class="registrar-thq-maskgroup-elm1">
+                  <img
+                    src="public/logomindcenter112522-fazm-200h.png"
+                    alt="LogoMindCenter112522"
+                    class="registrar-thq-logo-mind-center11-elm1"
+                  />
+                </div>
+                <img
+                  src="public/instagram32522-awj-200h.png"
+                  alt="instagram32522"
+                  class="registrar-thq-instagram3-elm1"
+                />
+                <img
+                  src="public/salidadeemergencia2522-4f6u-200h.png"
+                  alt="salidadeemergencia2522"
+                  class="registrar-thq-salidadeemergencia-elm1"
+                />
+                <span class="registrar-thq-text-elm46">Descubre y compra</span>
+                <span class="registrar-thq-text-elm47">Mis viajes</span>
+                <span class="registrar-thq-text-elm48">Vuelos</span>
+                <span class="registrar-thq-text-elm49">Inicio</span>
+                <span class="registrar-thq-text-elm50">
+                  Politicas de privacidad y seguridad
+                </span>
+                <span class="registrar-thq-text-elm51">
+                  Términos y condiciones
+                </span>
+                <span class="registrar-thq-text-elm52">Crear tu cuenta</span>
+                <span class="registrar-thq-text-elm53">
+                  Somos A volar Airline
+                </span>
+                <span class="registrar-thq-text-elm54">
+                  Servicio al cliente
+                </span>
+                <span class="registrar-thq-text-elm55">Reservas</span>
+                <span class="registrar-thq-text-elm56">Nuestras Redes</span>
+                <span class="registrar-thq-text-elm57">Ofertas</span>
+                <img
+                  src="public/instagram2522-b79k-200h.png"
+                  alt="Instagram2522"
+                  class="registrar-thq-instagram-elm1"
+                />
+                <img
+                  src="public/youtube2522-tx8-200h.png"
+                  alt="YouTube2522"
+                  class="registrar-thq-you-tube-elm1"
+                />
+                <span class="registrar-thq-text-elm58">Contactanos</span>
+                <span class="registrar-thq-text-elm59">
+                  Lineal nacional: 601234673
+                </span>
+                <span class="registrar-thq-text-elm60">
+                  WhatsApp 3125638910
+                </span>
+                <img
+                  src="public/facebook2522-g5ns-200h.png"
+                  alt="Facebook2522"
+                  class="registrar-thq-facebook-elm1"
+                />
+              </div>
+            </div>
+            <div class="registrar-thq-frame168-elm1">
+              <img
+                src="public/instagram2522-b1mk-200h.png"
+                alt="Instagram2522"
+                class="registrar-thq-instagram-elm2"
+              />
+              <img
+                src="public/youtube2522-613a-200w.png"
+                alt="YouTube2522"
+                class="registrar-thq-you-tube-elm2"
+              />
+            </div>
+          </div>
+          <div class="registrar-thq-frame170-elm">
+            <div class="registrar-thq-frame95-elm3">
+              <div class="registrar-thq-frame97-elm2">
+                <img
+                  src="public/line12522-e1a.svg"
+                  alt="Line12522"
+                  class="registrar-thq-line1-elm2"
+                />
+                <img
+                  src="public/line52522-9gq.svg"
+                  alt="Line52522"
+                  class="registrar-thq-line5-elm2"
+                />
+                <img
+                  src="public/line42522-hpd5.svg"
+                  alt="Line42522"
+                  class="registrar-thq-line4-elm2"
+                />
+                <div class="registrar-thq-frame95-elm4">
+                  <img
+                    src="public/line22522-uszv.svg"
+                    alt="Line22522"
+                    class="registrar-thq-line2-elm2"
+                  />
+                  <span class="registrar-thq-text-elm61">
+                    Información Legal
+                  </span>
+                </div>
+                <div class="registrar-thq-frame96-elm2">
+                  <img
+                    src="public/line32522-6z9n.svg"
+                    alt="Line32522"
+                    class="registrar-thq-line3-elm2"
+                  />
+                  <span class="registrar-thq-text-elm62">Nosotros</span>
+                </div>
+                <div class="registrar-thq-maskgroup-elm2">
+                  <img
+                    src="public/logomindcenter112522-x0eg-200h.png"
+                    alt="LogoMindCenter112522"
+                    class="registrar-thq-logo-mind-center11-elm2"
+                  />
+                </div>
+                <img
+                  src="public/instagram32522-tof4-200h.png"
+                  alt="instagram32522"
+                  class="registrar-thq-instagram3-elm2"
+                />
+                <img
+                  src="public/salidadeemergencia2522-0mv-200h.png"
+                  alt="salidadeemergencia2522"
+                  class="registrar-thq-salidadeemergencia-elm2"
+                />
+                <span class="registrar-thq-text-elm63">Descubre y compra</span>
+                <span class="registrar-thq-text-elm64">Mis viajes</span>
+                <span class="registrar-thq-text-elm65">Vuelos</span>
+                <span class="registrar-thq-text-elm66">Inicio</span>
+                <span class="registrar-thq-text-elm67">
+                  Politicas de privacidad y seguridad
+                </span>
+                <span class="registrar-thq-text-elm68">
+                  Términos y condiciones
+                </span>
+                <span class="registrar-thq-text-elm69">Crear tu cuenta</span>
+                <span class="registrar-thq-text-elm70">
+                  Somos A volar Airline
+                </span>
+                <span class="registrar-thq-text-elm71">
+                  Servicio al cliente
+                </span>
+                <span class="registrar-thq-text-elm72">Reservas</span>
+                <span class="registrar-thq-text-elm73">Nuestras Redes</span>
+                <span class="registrar-thq-text-elm74">Ofertas</span>
+                <img
+                  src="public/instagram2522-ivd-200h.png"
+                  alt="Instagram2522"
+                  class="registrar-thq-instagram-elm3"
+                />
+                <img
+                  src="public/youtube2522-igde-200h.png"
+                  alt="YouTube2522"
+                  class="registrar-thq-you-tube-elm3"
+                />
+                <span class="registrar-thq-text-elm75">Contactanos</span>
+                <span class="registrar-thq-text-elm76">
+                  Lineal nacional: 601234673
+                </span>
+                <span class="registrar-thq-text-elm77">
+                  WhatsApp 3125638910
+                </span>
+                <img
+                  src="public/facebook2522-rtt3-200h.png"
+                  alt="Facebook2522"
+                  class="registrar-thq-facebook-elm2"
+                />
+              </div>
+            </div>
+            <div class="registrar-thq-frame168-elm2">
+              <img
+                src="public/instagram2522-d4pd-200h.png"
+                alt="Instagram2522"
+                class="registrar-thq-instagram-elm4"
+              />
+              <img
+                src="public/youtube2522-hx3s-200w.png"
+                alt="YouTube2522"
+                class="registrar-thq-you-tube-elm4"
+              />
+            </div>
+          </div>
+          <div class="registrar-thq-frame174-elm">
+            <span class="registrar-thq-text-elm78">A Volar Airline</span>
+            <span class="registrar-thq-text-elm79">Inicio</span>
+            <span class="registrar-thq-text-elm80">Ofertas</span>
+            <span class="registrar-thq-text-elm81">Paquetes Turisticos</span>
+            <span class="registrar-thq-text-elm82">Mis viajes</span>
+            <img
+              src="public/chatgptimage28feb202617353922546-17gq-200h.png"
+              alt="ChatGPTImage28feb202617353922546"
+              class="registrar-thq-chat-gpt-image28feb20261735392-elm"
+            />
+          </div>
+        </div>
+        <a href="https://play.teleporthq.io/signup" class="registrar-link">
+          <div aria-label="Sign up to TeleportHQ" class="registrar-container2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="registrar-icon1"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="registrar-text">Built in TeleportHQ</span>
+          </div>
+        </a>
+      </div>
+      <link
+        rel="canonical"
+        href="https://pagina-web-a-volar-62qr6u.teleporthq.app/"
+      />
+    </div>
+  </body>
+</html>
