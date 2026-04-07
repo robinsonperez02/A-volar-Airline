@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paquetes Turísticos</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b993f9, #8ca6db);
+}
+
+/* CONTENEDOR */
+.container{
+    width:90%;
+    margin:auto;
+}
+
+/* BUSCADOR */
+.search-box{
+    background:white;
+    margin:20px auto;
+    padding:15px;
+    border-radius:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+
+.search-box input, .search-box button{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+.search-box button{
+    background:#6c2bd9;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+/* TITULO */
+h1{
+    text-align:center;
+    color:#4b2aad;
+}
+
+/* GRID */
+.cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:20px 0;
+}
+
+/* TARJETA */
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+.card-content{
+    padding:15px;
+}
+
+.tag{
+    background:#000;
+    color:white;
+    font-size:12px;
+    padding:5px 8px;
+    border-radius:6px;
+    display:inline-block;
+    margin-bottom:5px;
+}
+
+.rating{
+    color:#ffb400;
+    font-size:14px;
+}
+
+.price{
+    margin-top:10px;
+    font-weight:bold;
+    color:#333;
+}
+
+.small{
+    font-size:12px;
+    color:#666;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BUSCADOR -->
+    <div class="search-box">
+        <input type="text" placeholder="Origen">
+        <input type="text" placeholder="Destino">
+        <input type="date">
+        <input type="date">
+        <input type="number" placeholder="Personas">
+        <button>Buscar</button>
+    </div>
+
+    <h1>Paquetes Turísticos</h1>
+
+    <!-- TARJETAS -->
+    <div class="cards">
+
+        <!-- TARJETA -->
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?cartagena" alt="">
+            <div class="card-content">
+                <span class="tag">5 DÍAS / 4 NOCHES</span>
+                <h3>Cartagena de Indias</h3>
+                <div class="rating">⭐ 8.2</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $950.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?quindio" alt="">
+            <div class="card-content">
+                <span class="tag">5 DÍAS / 4 NOCHES</span>
+                <h3>Quindío</h3>
+                <div class="rating">⭐ 8.2</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $890.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?risaralda" alt="">
+            <div class="card-content">
+                <span class="tag">4 DÍAS / 3 NOCHES</span>
+                <h3>Risaralda</h3>
+                <div class="rating">⭐ 7.6</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $700.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?boyaca" alt="">
+            <div class="card-content">
+                <span class="tag">5 DÍAS / 4 NOCHES</span>
+                <h3>Boyacá</h3>
+                <div class="rating">⭐ 8.8</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $500.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?santa-marta" alt="">
+            <div class="card-content">
+                <span class="tag">2 DÍAS / 1 NOCHE</span>
+                <h3>Santa Marta</h3>
+                <div class="rating">⭐ 7.2</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $290.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?bogota" alt="">
+            <div class="card-content">
+                <span class="tag">3 DÍAS / 2 NOCHES</span>
+                <h3>Bogotá</h3>
+                <div class="rating">⭐ 8.0</div>
+                <p>Hotel + Vuelo</p>
+                <div class="price">COP $300.000</div>
+                <p class="small">Incluye impuestos, tasas y cargos</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
