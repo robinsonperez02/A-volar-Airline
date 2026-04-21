@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Vuelos - A Volar Airline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleestado_reserva.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="d.png" alt="Logo A Volar" class="logo-img">
+            <span class="airline-name">A Volar Airline</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../proyecto-2/ofertas.html">Ofertas</a></li>
+                <li><a href="../proyecto-4/estado_reserva.html">Mis Reservas</a></li>
+                <li><a href="../proyecto-3/index.html">Paquetes Turísticos</a></li>
+                <li><a href="../proyecto-5/index.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        <div class="hero-messages">
+            <h1 class="hero-title-main">Descubre el mundo con nosotros</h1>
+            <p class="hero-subtitle-main">Encuentra los mejores vuelos a los destinos mas increibles del mundo</p>
+        </div>
+
+        <section class="search-box">
+            <div class="tabs-container">
+                <button class="tab-btn active" data-type="round-trip">Ida y vuelta</button>
+                <button class="tab-btn" data-type="one-way">Solo ida</button>
+            </div>
+            
+            <form class="search-grid" id="search-form">
+                <div class="input-group">
+                    <label>Origen</label>
+                    <input type="text" id="origin" placeholder="Ciudad origen" required>
+                </div>
+                <div class="input-group">
+                    <label>Destino</label>
+                    <input type="text" id="destination" placeholder="Ciudad destino" required>
+                </div>
+                <div class="input-group">
+                    <label>Fecha de salida</label>
+                    <input type="date" id="departure-date" required>
+                </div>
+                
+                <div class="input-group" id="return-group">
+                    <label>Fecha de regreso</label>
+                    <input type="date" id="return-date">
+                </div>
+
+                <div class="input-group">
+                    <label>Pasajeros</label>
+                    <input type="number" id="passengers" value="1" min="1">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn-buscar-form">Buscar Vuelo</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="results-section" class="results-area">
+            <h2 class="results-title">Vuelos encontrados</h2>
+            <div id="results-list"></div>
+        </section>
+    </main>
+
+    <div class="features-container">
+        <div class="feature-item">
+            <div class="icon-circle">🛡️</div>
+            <h3>Reserva segura</h3>
+            <p>Tus datos están protegidos</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle">🕒</div>
+            <h3>Disponibilidad 24/7</h3>
+            <p>Reserva tus vuelos en cualquier momento</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle">🏆</div>
+            <h3>Mejores precios</h3>
+            <p>Garantizamos las tarifas más competitivas del mercado</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle">🎧</div>
+            <h3>Soporte dedicado</h3>
+            <p>Nuestro equipo esta siempre disponible para ayudarte</p>
+        </div>
+    </div>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>¡Descubre la<br>diversidad de<br>Colombia!</h1>
+        <p>No te pierdas la oportunidad de vivir<br>experiencias inolvidables</p>
+      </div>
+    </section>
+
+    <h2 class="offers-message">Arma tu viaje completo con nosotros</h2>
+
+    <section class="destinations-section">
+        <div class="destinations-grid">
+            <article class="destination-card">
+                <img class="destination-img" src="Bogota.jpg" alt="Bogotá">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Bogotá</span>
+                        <span class="destination-savings">Ahorra 20%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $86.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="medellin.jpg" alt="Medellín">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Medellín</span>
+                        <span class="destination-savings">Ahorra 20%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $86.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="villa.jpg" alt="Villavicencio">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Villavicencio</span>
+                        <span class="destination-savings">Ahorra 20%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $86.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="Bucaramanga.jpg" alt="Bucaramanga">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Bucaramanga</span>
+                        <span class="destination-savings">Ahorra 5%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $100.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="Bara.jpg" alt="Barranquilla">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Barranquilla</span>
+                        <span class="destination-savings">Ahorra 20%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $86.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="Cali1.jpg" alt="Cali">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Cali</span>
+                        <span class="destination-savings">Ahorra 20%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $76.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="sanandres.jpg" alt="San Andrés">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">San Andrés</span>
+                        <span class="destination-savings">Ahorra 15%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $180.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="cucuta.jpg" alt="Pereira">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Pereira</span>
+                        <span class="destination-savings">Ahorra 10%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $95.000</span>
+                </div>
+            </article>
+            <article class="destination-card">
+                <img class="destination-img" src="Bogota.jpg" alt="Leticia">
+                <div class="destination-card-overlay">
+                    <div class="destination-info">
+                        <span class="destination-city">Leticia</span>
+                        <span class="destination-savings">Ahorra 25%</span>
+                    </div>
+                    <p class="destination-text">Proyecto desde</p>
+                    <span class="destination-price">COP $210.000</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Descubre y compra</h4>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Crear tu cuenta</li>
+                    <li>Vuelos</li>
+                    <li>Reservas</li>
+                    <li>Mis viajes</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li>Políticas de privacidad y seguridad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <p>Somos A volar Airline</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>Servicio al cliente</li>
+                    <li>WhatsApp 3125638910</li>
+                    <li>Lineal nacional: 601234673</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Redes</h4>
+                <div class="social-icons">
+                    <div class="icon-box">f</div>
+                    <div class="icon-box">ig</div>
+                    <div class="icon-box">yt</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const returnGroup = document.getElementById('return-group');
+            const returnInput = document.getElementById('return-date');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    if (btn.getAttribute('data-type') === 'one-way') {
+                        returnGroup.style.display = 'none';
+                    } else {
+                        returnGroup.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
