@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Reserva</title>
+    <link rel="stylesheet" href="styleestado_reserva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="d.png" alt="Logo A Volar" class="logo-img">
+            <span class="airline-name">A Volar Airline</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../proyecto-1/index.html">Inicio</a></li>
+                <li><a href="../proyecto-2/ofertas.html">Ofertas</a></li>
+                <li><a href="../proyecto-4/estado_reserva.html">Mis reservas</a></li>
+                <li><a href="../proyecto-3/index.html">Paquetes Turísticos</a></li>
+                <li><a href="index.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-section">
+        <div class="login-card">
+            <h2>Iniciar sesión en su cuenta</h2>
+            <div class="signup-link">
+                ¿no eres miembro de A Volar? 
+                <a href="registro.html">Únete ahora ></a>
+            </div>
+
+            <div class="input-group">
+                <label for="user-email">correo electronico</label>
+                <input type="email" id="user-email" class="input-field">
+            </div>
+
+            <div class="input-group">
+                <label for="user-pass">contraseña</label>
+                <div class="password-wrapper">
+                    <input type="password" id="user-pass" class="input-field">
+                    <span class="eye-icon" id="toggle-pass" style="cursor: pointer;">👁</span>
+                </div>
+            </div>
+
+            <button class="submit-btn">Iniciar sesión</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Descubre y compra</h4>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Crear tu cuenta</li>
+                    <li>Vuelos</li>
+                    <li>Reservas</li>
+                    <li>Mis viajes</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li>Políticas de privacidad y seguridad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <p>Somos A volar Airline</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>Servicio al cliente</li>
+                    <li>WhatsApp 3125638910</li>
+                    <li>Lineal nacional: 601234673</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Redes</h4>
+                <div class="social-icons">
+                    <div class="icon-box">f</div>
+                    <div class="icon-box">ig</div>
+                    <div class="icon-box">yt</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de Inicio de Sesión
+        document.querySelector('.submit-btn').addEventListener('click', function() {
+            const email = document.getElementById('user-email').value;
+            const pass = document.getElementById('user-pass').value;
+
+            if (!email || !pass) {
+                alert("Por favor, completa todos los campos para ingresar.");
+                return;
+            }
+
+            // Buscar el usuario registrado
+            const storedUser = localStorage.getItem('user_' + email);
+            
+            if (storedUser) {
+                const userData = JSON.parse(storedUser);
+                if (userData.pass === pass) {
+                    alert("¡Bienvenido de nuevo, " + userData.name + "!");
+                    window.location.href = "../proyecto-1/index.html";
+                } else {
+                    alert("La contraseña es incorrecta.");
+                }
+            } else {
+                alert("Este correo no está registrado. Haz clic en 'Únete ahora' para crear una cuenta.");
+            }
+        });
+
+        // Mostrar/Ocultar contraseña
+        const togglePass = document.getElementById('toggle-pass');
+        const passInput = document.getElementById('user-pass');
+
+        togglePass.addEventListener('click', function() {
+            const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passInput.setAttribute('type', type);
+            this.textContent = type === 'password' ? '👁' : '🙈';
+        });
+    </script>
+</body>
+</html>
