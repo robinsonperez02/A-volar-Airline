@@ -1,0 +1,153 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Volar Airline | Reservas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_finalizar_compra.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo A Volar" class="logo-img">
+            <span class="airline-name">A Volar Airline</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Mis viajes</a></li>
+                <li><a href="#">Paquetes Turísticos</a></li>
+                <li><a href="#">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="payment-wrapper">
+        <div class="payment-grid">
+            
+            <section class="form-section">
+                <h2>Datos del Pasajero</h2>
+                <form id="payment-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Nombre</label>
+                            <input type="text" id="p-name" placeholder="Ej. Valentina" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Apellido</label>
+                            <input type="text" id="p-lastname" placeholder="Ej. Varon" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="p-email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <h2 style="margin-top: 30px;">Información de Pago</h2>
+                    <div class="input-group">
+                        <label>Número de Tarjeta</label>
+                        <input type="text" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Fecha Vencimiento</label>
+                            <input type="text" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="input-group">
+                            <label>CVV</label>
+                            <input type="password" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-finalizar">Pagar y Reservar</button>
+                </form>
+            </section>
+
+            <aside class="summary-section">
+                <div class="summary-card">
+                    <h3>Resumen del Viaje</h3>
+                    <div id="flight-summary">
+                        </div>
+                    <hr>
+                    <div class="total-row">
+                        <span>Total a pagar:</span>
+                        <strong id="total-price">$0</strong>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Recuperar datos guardados del vuelo seleccionado
+            const vuelo = JSON.parse(localStorage.getItem('vueloSeleccionado'));
+            
+            if(vuelo) {
+                document.getElementById('flight-summary').innerHTML = `
+                    <p><strong>Ruta:</strong> ${vuelo.ruta}</p>
+                    <p><strong>Vuelo:</strong> ${vuelo.id}</p>
+                    <p><strong>Clase:</strong> ${vuelo.clase}</p>
+                `;
+                document.getElementById('total-price').textContent = vuelo.total;
+            }
+
+            document.getElementById('payment-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('¡Pago procesado con éxito!');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Descubre y compra</h4>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Crear tu cuenta</li>
+                    <li>Vuelos</li>
+                    <li>Reservas</li>
+                    <li>Mis viajes</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li>Políticas de privacidad y seguridad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <p>Somos A volar Airline</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>Servicio al cliente</li>
+                    <li>WhatsApp 3125638910</li>
+                    <li>Lineal nacional: 601234673</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Redes</h4>
+                <div class="social-icons">
+                    <div class="icon-box">f</div>
+                    <div class="icon-box">ig</div>
+                    <div class="icon-box">yt</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

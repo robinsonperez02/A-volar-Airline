@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 10px 20px;
+    gap: 50px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave inferior */
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
+
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    margin-left: 50px;
+}
+
+.airline-name {
+    color: #8C1C4C;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 150px; /* Ajustado para mejor visibilidad */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #8C1C4C; 
+}
+
+.checkin-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.step {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+}
+
+.step.active {
+    color: #8C1C4C;
+    border-bottom: 2px solid #8C1C4C;
+}
+
+.checkin-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+h2 { color: #5C1337; margin-bottom: 10px; }
+.subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
+
+.declaration-box {
+    background: #fff5f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.declaration-box h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #8C1C4C;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.info-box {
+    border-left: 4px solid #8C1C4C;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 18px;
+    background: #8C1C4C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-finalizar:hover {
+    background: #5C1337;
+}
+/* Footer */
+.footer {
+    background-color: #8C1C4C;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #5C1337;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

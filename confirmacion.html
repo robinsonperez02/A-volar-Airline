@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmacion - A Volar Airline</title>
+    <link rel="stylesheet" href="style_confirmacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo A Volar" class="logo-img">
+            <span class="airline-name">A Volar Airline</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Mi Reserva</a></li>
+                <li><a href="#">Paquetes Turísticos</a></li>
+                <li><a href="#">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="success-header">
+            <div class="icon-check">✓</div>
+            <h1>¡Tu reserva está confirmada!</h1>
+            <p>Hemos encontrado tu viaje. Aquí tienes los detalles.</p>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-header">
+                <span>VUELO: <strong>AV-2026</strong></span>
+                <span>ESTADO: <strong>CONFIRMADO</strong></span>
+            </div>
+            
+            <div class="ticket-body">
+                <div class="passenger-info">
+                    <p class="label-ticket">Pasajero</p>
+                    <p class="data-ticket" id="display-nombre">Cargando...</p>
+                </div>
+
+                <div class="flight-route">
+                    <div class="city">
+                        <p class="code">BOG</p>
+                        <p class="full-city">Bogotá</p>
+                    </div>
+                    <div class="plane-icon">✈</div>
+                    <div class="city">
+                        <p class="code">MDE</p>
+                        <p class="full-city">Medellín</p>
+                    </div>
+                </div>
+
+                <div class="flight-details">
+                    <div>
+                        <p class="label-ticket">Fecha</p>
+                        <p class="data-ticket">15 May 2026</p>
+                    </div>
+                    <div>
+                        <p class="label-ticket">Hora</p>
+                        <p class="data-ticket">08:30 AM</p>
+                    </div>
+                    <div>
+                        <p class="label-ticket">Silla</p>
+                        <p class="data-ticket">12A (Pasillo)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ticket-footer">
+                <p>Presenta este código en el counter del aeropuerto.</p>
+                <div class="barcode">|||| ||| ||||| || |||| |||</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn-print" onclick="window.print()">Descargar PDF</button>
+            <a href="estado_reserva.html" class="btn-back">Volver al inicio</a>
+        </div>
+    </main>
+
+    <script>
+        // Lógica simple para mostrar el nombre del pasajero guardado
+        document.addEventListener('DOMContentLoaded', () => {
+            const nombreGuardado = localStorage.getItem('usuarioReserva') || "Pasajero";
+            document.getElementById('display-nombre').textContent = nombreGuardado;
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Descubre y compra</h4>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Crear tu cuenta</li>
+                    <li>Vuelos</li>
+                    <li>Reservas</li>
+                    <li>Mis viajes</li>
+                    <li>Ofertas</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li>Políticas de privacidad y seguridad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <p>Somos A volar Airline</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>Servicio al cliente</li>
+                    <li>WhatsApp 3125638910</li>
+                    <li>Lineal nacional: 601234673</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Redes</h4>
+                <div class="social-icons">
+                    <div class="icon-box">f</div>
+                    <div class="icon-box">ig</div>
+                    <div class="icon-box">yt</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</body>
+</html>

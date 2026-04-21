@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-wrapper {
+    width: 90%; 
+    max-width: 1000px; /* Reducimos el ancho máximo para que sea más compacto */
+    margin: 40px auto; 
+}
+
+.search-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px 40px; 
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.tabs-container { display: flex; gap: 10px; margin-bottom: 25px; }
+
+.tab-btn {
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: #f0f0f0;
+    color: #8C1C4C;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.tab-btn.active {
+    background: #8C1C4C;
+    color: white;
+}
+
+.search-grid {
+    display: grid;
+    /* Al reducir el ancho del contenedor, auto-fit manejará mejor el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.btn-buscar-form {
+    width: 100%;
+    background: #8C1C4C;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.results-area { margin-top: 30px; display: none; }
+.results-title { color: #8C1C4C; margin-bottom: 20px; font-weight: 700; }
+
+.flight-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #8C1C4C;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.tags-row { margin-top: 10px; display: flex; gap: 8px; }
+.tag {
+    background: #f0f0f0;
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.price-box { text-align: right; }
+.amount { display: block; font-size: 1.4rem; font-weight: 800; }
+.btn-reservar { background: #8C1C4C; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 5px; }
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .main-wrapper { width: 95%; }
+    .search-grid { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Header */
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
+
+/* Ajuste del tamaño de la imagen */
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    object-fit: contain; 
+    margin-left: 50px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 10px 20px;
+    gap: 50px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.airline-name {
+    color: #8C1C4C;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 270px;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap; /* Evita que los nombres largos se partan en dos líneas */
+}
+
+.nav-links a:hover {
+    color: #8C1C4C; 
+}
+
+.payment-wrapper { width: 90%; max-width: 1100px; margin: 40px auto; }
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.form-section, .summary-card {
+    background: white; padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+h2 { color: #5C1337; margin-bottom: 20px; font-size: 1.2rem; }
+
+.input-row { display: flex; gap: 15px; }
+.input-group { margin-bottom: 15px; width: 100%; }
+.input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: #666; margin-bottom: 5px; }
+.input-group input {
+    width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; outline: none;
+}
+
+.btn-finalizar {
+    width: 100%; 
+    background: #8C1C4C; 
+    color: white; 
+    border: none;
+    padding: 15px; 
+    border-radius: 10px; 
+    font-weight: 700; 
+    cursor: pointer;
+    font-size: 1rem; 
+    margin-top: 20px;
+}
+
+.summary-card h3 { color: #8C1C4C; margin-bottom: 15px; }
+.summary-card p { font-size: 0.9rem; margin-bottom: 10px; color: #444; }
+.total-row { display: flex; justify-content: space-between; margin-top: 15px; font-size: 1.2rem; font-weight: 800; color: #5C1337; }
+
+@media (max-width: 768px) {
+    .payment-grid { grid-template-columns: 1fr; }
+}
+/* Footer */
+.footer {
+    background-color: #8C1C4C;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #5C1337;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Estado Reserva A Volar Airline | Reservas</title>
+    <title>Check-in A Volar Airline | Reservas</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styleestado_reserva.css">
+    <link rel="stylesheet" href="style_checkin.css">
 </head>
 <body>
 
@@ -24,74 +24,57 @@
             </ul>
         </nav>
     </header>
-
-    <main class="hero">
-        <div class="hero-content">
-            <span class="label">Mi reserva</span>
-            <h1 class="main-title">Administrar mi viaje y <br> realizar check-in</h1>
-            <div class="line"></div>
-            
-            <p class="description">
-                Ingresa con los datos de tu reserva y podrás<br>
-                acceder al portal de autogestión
-            </p>
-
-            <form id="form-gestion" class="form-container">
-                <input type="text" id="codigo-input" placeholder="Código de reserva" class="input-field" required>
-                <input type="text" id="nombre-input" placeholder="Nombre completo" class="input-field" required>
-                <button type="submit" class="btn-buscar">Buscar</button>
-            </form>
-
-            <div id="resultado-busqueda" class="feedback-msg"></div>
+   
+    <main class="checkin-container">
+        <div class="step-indicator">
+            <span class="step active">1. Declaración</span>
+            <span class="step">2. Asiento</span>
+            <span class="step">3. Abordaje</span>
         </div>
+
+        <section class="checkin-card">
+            <h2>Check-in para <span id="nombre-pasajero">Pasajero</span></h2>
+            <p class="subtitle">Vuelo AV2026 | Bogotá (BOG) → Medellín (MDE)</p>
+
+            <form id="checkin-form">
+                <div class="declaration-box">
+                    <h3>Declaración de Salud y Seguridad</h3>
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        No transporto mercancías peligrosas (aerosoles, inflamables, etc.)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        Declaro que mi estado de salud es óptimo para viajar.
+                    </label>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Equipaje incluido:</strong> 1 Morral (debajo del asiento) y 1 maleta de mano (10kg).</p>
+                </div>
+
+                <button type="submit" class="btn-finalizar">Generar Pase de Abordar</button>
+            </form>
+        </section>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('form-gestion');
-            const mensaje = document.getElementById('resultado-busqueda');
+            const nombre = localStorage.getItem('usuarioReserva') || "Pasajero";
+            document.getElementById('nombre-pasajero').textContent = nombre;
 
-            // Base de datos
-            const reservasValidas = [
-                { codigo: "AV2026", nombre: "Valentina Varon" },
-                { codigo: "AV2026", nombre: "Robinson Perez" },
-                { codigo: "AV2026", nombre: "Andrey Tabares" }
-            ];
-
+            const form = document.getElementById('checkin-form');
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-
-                const codValue = document.getElementById('codigo-input').value.trim().toUpperCase();
-                const nomValue = document.getElementById('nombre-input').value.trim().toLowerCase();
-
-                // Mensaje de carga
-                mensaje.textContent = "Buscando...";
-                mensaje.className = "feedback-msg loading-text";
-
-                setTimeout(() => {
-                    // Buscamos coincidencia 
-                    const encontrado = reservasValidas.find(r => 
-                        r.codigo === codValue && r.nombre.toLowerCase() === nomValue
-                    );
-
-                    if (encontrado) {
-    mensaje.textContent = `¡Reserva confirmada! Redirigiendo...`;
-    mensaje.className = "feedback-msg success-text";
-    
-    // Guardamos el nombre para usarlo en la siguiente página
-    localStorage.setItem('usuarioReserva', encontrado.nombre);
-    
-    // Redirigimos después de 1.5 segundos
-    setTimeout(() => {
-        window.location.href = "checkin.html";
-    }, 1500);
-}
-                }, 800);
+                // Redirige a la página de confirmación/ticket que hicimos antes
+                window.location.href = "confirmacion.html";
             });
         });
     </script>
 
-<footer class="footer">
+    <footer class="footer">
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Descubre y compra</h4>
@@ -133,6 +116,6 @@
             </div>
         </div>
     </footer>
-</body>
+
 </body>
 </html>

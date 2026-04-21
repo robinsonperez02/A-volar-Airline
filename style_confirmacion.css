@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 10px 20px;
+    gap: 50px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave inferior */
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
+
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    margin-left: 50px;
+}
+
+.airline-name {
+    color: #8C1C4C;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 150px; /* Ajustado para mejor visibilidad */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #8C1C4C; 
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.success-header h1 {
+    color: #5C1337;
+    margin: 15px 0;
+}
+
+.icon-check {
+    width: 60px;
+    height: 60px;
+    background: #2d6a4f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+/* Estilo del Ticket */
+.ticket {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    border: 1px dashed #ccc;
+}
+
+.ticket-header {
+    background: #8C1C4C;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.ticket-body {
+    padding: 40px;
+}
+
+.flight-route {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.code {
+    font-size: 40px;
+    font-weight: 800;
+    color: #5C1337;
+}
+
+.plane-icon {
+    font-size: 30px;
+    color: #8C1C4C;
+}
+
+.flight-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.label-ticket {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.data-ticket {
+    font-weight: 700;
+    color: #333;
+}
+
+.ticket-footer {
+    background: #f9f9f9;
+    padding: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+.barcode {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Botones */
+.actions {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-print {
+    padding: 15px 30px;
+    background: #8C1C4C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-back {
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #8C1C4C;
+    border: 2px solid #8C1C4C;
+    border-radius: 10px;
+    font-weight: 600;
+}
+/* Footer */
+.footer {
+    background-color: #8C1C4C;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #5C1337;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
