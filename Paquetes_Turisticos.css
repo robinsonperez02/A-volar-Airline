@@ -1,0 +1,551 @@
+/* Variables de Marca - Mejora de Calidad */
+:root {
+    --primary-color: #8C1C4C;
+    --secondary-color: #8C1C4C;
+    --accent-color: #C4A747;
+    --text-dark: #1f2937;
+    --text-muted: #4b5563;
+    --bg-light: #f3f4f6;
+    --white: #ffffff;
+    --shadow: rgba(15, 23, 42, 0.08);
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f4f7f9;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 10px 20px;
+    gap: 50px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 12px;           
+}
+
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    object-fit: contain; 
+    margin-left: 50px;
+}
+
+.airline-name {
+    color: #8C1C4C;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-right: 40px; /* Espacio extra después del nombre */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 270px;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap; /* Evita que los nombres largos se partan en dos líneas */
+}
+
+.nav-links a:hover {
+    color: #8C1C4C; 
+}
+
+/* --- AQUÍ ESTÁ EL CAMBIO CLAVE --- */
+.main-wrapper {
+    width: 90%; 
+    max-width: 1000px; /* Reducimos el ancho máximo para que sea más compacto */
+    margin: 40px auto; 
+}
+
+.search-box {
+    background: white;
+    padding: 30px 40px; 
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.tabs-container { display: flex; gap: 10px; margin-bottom: 25px; }
+
+.tab-btn {
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: #f0f0f0;
+    color: #8C1C4C;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.tab-btn.active {
+    background: #8C1C4C;
+    color: white;
+}
+
+.search-grid {
+    display: grid;
+    /* Al reducir el ancho del contenedor, auto-fit manejará mejor el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.btn-buscar-form {
+    width: 100%;
+    background: #8C1C4C;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* --- RESULTADOS REDUCIDOS --- */
+.results-area { margin-top: 30px; display: none; }
+.results-title { color: #8C1C4C; margin-bottom: 20px; font-weight: 700; }
+.results-title { color: #8C1C4C; margin-bottom: 20px; font-weight: 700; }
+
+.flight-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    margin: 0 auto 15px;
+    max-width: 800px; /* Limita el ancho para que no se vea tan largo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #8C1C4C;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.tags-row { margin-top: 10px; display: flex; gap: 8px; }
+.tag {
+    background: #f0f0f0;
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.price-box { text-align: right; }
+.amount { display: block; font-size: 1.4rem; font-weight: 800; }
+.btn-reservar { background: #8C1C4C; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 5px; }
+.btn-reservar { background: #8C1C4C; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 5px; }
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .main-wrapper { width: 95%; }
+    .search-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.offers-message {
+    font-size: 55px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 100px; /* Más espacio respecto al buscador superior */
+    margin-bottom: 60px; /* Más espacio respecto a los paquetes */
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Sección de Paquetes Turísticos */
+.packages-section {
+    background-color: #f3f4f6;
+    padding-bottom: 80px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+    justify-items: center;
+}
+
+/* Estilos de la Tarjeta de Viaje (Refactorizados) */
+.pkg-card {
+    width: 260px; /* Tarjeta un poco más estrecha */
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    transition: transform var(--transition);
+}
+
+.pkg-image-container {
+    position: relative;
+}
+
+.pkg-image-container img {
+    width: 100%;
+    height: 200px; /* Imagen más larga */
+    object-fit: cover;
+    display: block;
+}
+
+.pkg-content {
+    padding: 20px 15px 15px; /* Menos relleno interno */
+    padding: 20px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
+.pkg-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 15px;
+    margin: 0 0 10px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.pkg-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.pkg-rating-score {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-right: 10px;
+}
+
+.pkg-duration-pill {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.pkg-separator {
+    height: 1px;
+    background-color: rgba(0,0,0,0.1);
+    margin: 15px 0;
+}
+
+.pkg-price-section {
+    text-align: center;
+}
+
+.pkg-price-label {
+    margin-bottom: 15px; /* Espacio solicitado entre el texto y el precio */
+    font-weight: 500;
+}
+
+.pkg-price-tag {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.pkg-details p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.pkg-disclaimer {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Features */
+.feature-section {
+    padding: 60px 10%;
+    background: var(--white);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Destinations */
+.destinations-section {
+    background: var(--bg-light);
+    padding: 80px 10%;
+}
+
+.destinations-header h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 24px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.destination-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.destination-card:hover .destination-img {
+    transform: scale(1.1);
+}
+
+.destination-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: var(--white);
+}
+
+.destination-savings {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.destination-price {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Footer */
+.footer {
+    background-color: #8C1C4C;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #8C1C4C;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* --- EXPERIENCIA CREATIVA DE COMPRA --- */
+
+/* Capa de fondo para el proceso de compra */
+.purchase-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Tarjeta de Confirmación de Compra */
+.checkout-card {
+    background: var(--white);
+    width: 90%;
+    max-width: 450px;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    text-align: center;
+}
+
+.checkout-header {
+    background: var(--primary-color);
+    padding: 40px 20px;
+    color: var(--white);
+}
+
+.checkout-header h2 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.checkout-body {
+    padding: 30px;
+}
+
+.purchase-summary {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.summary-item strong { color: var(--text-dark); }
+
+.total-price-row {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--bg-light);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price-row span {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.btn-confirm-purchase {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px #8C1C4C(140, 28, 76, 0.4);
+}
+
+.btn-confirm-purchase:hover {
+    transform: scale(1.03);
+    background: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    to { transform: translateY(0); }
+}
