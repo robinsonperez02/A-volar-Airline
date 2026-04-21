@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Volar Airline | Reservas</title>
+    <link rel="stylesheet" href="styleestado_reserva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="d.png" alt="Logo A Volar" class="logo-img">
+            <span class="airline-name">A Volar Airline</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../proyecto-1/index.html">Inicio</a></li>
+                <li><a href="../proyecto-2/ofertas.html">Ofertas</a></li>
+                <li><a href="../proyecto-4/estado_reserva.html">Mis reservas</a></li>
+                <li><a href="index.html">Paquetes Turísticos</a></li>
+                <li><a href="../proyecto-5/index.html">Mi cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
+        
+        <section class="search-box">
+            <div class="tabs-container">
+                <button class="tab-btn active" data-type="round-trip">Ida y vuelta</button>
+                <button class="tab-btn" data-type="one-way">Solo ida</button>
+            </div>
+            
+            <form class="search-grid" id="search-form">
+                <div class="input-group">
+                    <label>Origen</label>
+                    <input type="text" id="origin" placeholder="Ciudad origen" required>
+                </div>
+                <div class="input-group">
+                    <label>Destino</label>
+                    <input type="text" id="destination" placeholder="Ciudad destino" required>
+                </div>
+                <div class="input-group">
+                    <label>Fecha de salida</label>
+                    <input type="date" id="departure-date" required>
+                </div>
+                
+                <div class="input-group" id="return-group">
+                    <label>Fecha de regreso</label>
+                    <input type="date" id="return-date">
+                </div>
+
+                <div class="input-group">
+                    <label>Pasajeros</label>
+                    <input type="number" id="passengers" value="1" min="1">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn-buscar-form">Buscar Vuelo</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="results-section" class="results-area">
+            <h2 class="results-title">Vuelos encontrados</h2>
+            <div id="results-list">
+                </div>
+        </section>
+
+    </main>
+
+    <h2 class="offers-message" id="section-title">Paquetes Turísticos</h2>
+
+    <section class="packages-section">
+        <div class="packages-grid">
+            <!-- Tarjeta Izquierda: Medellín -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="mer.jpg" alt="Medellín">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Alemania</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">3 días/2 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Hotel + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $520.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nueva Tarjeta de Viaje Integrada -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="su.jpg" alt="Cartagena de Indias">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Suiza</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">5 días/4 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Hotel + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $690.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Derecha: San Andrés -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="on.jpg" alt="San Andrés">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">San Andrés</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">4 días/3 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Medellín</p>
+                        <p>Hotel Todo Incluido + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $980.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Santa Marta -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="cana.jpg" alt="Santa Marta">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Canada</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">4 días/3 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Hotel frente al mar + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $750.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Cali -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="ja.jpg" alt="Cali">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Japon</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">3 días/2 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Barranquilla</p>
+                        <p>Hotel Boutique + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $980.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Pereira -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="ch.jpg" alt="Pereira">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">China</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">3 días/2 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Finca Cafetera + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $1.500.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Bogotá -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="es.jpg" alt="Bogotá">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">España</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">3 días/2 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Cali</p>
+                        <p>Hotel + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $550.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Bucaramanga -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="sue.jpg" alt="Bucaramanga">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Suecia</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">4 días/3 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Hotel + Vuelo + Tour</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $2.780.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Villavicencio -->
+            <div class="pkg-card">
+                <div class="pkg-image-container">
+                    <img src="mex.jpg" alt="Villavicencio">
+                </div>
+                
+                <div class="pkg-content">
+                    <h3 class="pkg-title">Mexico</h3>
+                    
+                    <div class="pkg-rating">
+                        <span class="pkg-duration-pill">3 días/2 noches</span>
+                    </div>
+                    
+                    <div class="pkg-details">
+                        <p>Partiendo desde Bogotá</p>
+                        <p>Finca Hotel + Vuelo</p>
+                    </div>
+                    
+                    <div class="pkg-separator"></div>
+                    
+                    <div class="pkg-price-section">
+                        <p class="pkg-price-label">Precio por persona</p>
+                        <div class="pkg-price-tag">COP $390.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const returnGroup = document.getElementById('return-group');
+            const returnInput = document.getElementById('return-date');
+            const searchForm = document.getElementById('search-form');
+            const resultsSection = document.getElementById('results-section');
+            const resultsList = document.getElementById('results-list');
+            const packages = document.querySelectorAll('.pkg-card');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    if (btn.getAttribute('data-type') === 'one-way') {
+                        returnGroup.style.display = 'none';
+                        returnInput.required = false;
+                    } else {
+                        returnGroup.style.display = 'block';
+                        returnInput.required = true;
+                    }
+                });
+            });
+
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const origin = document.getElementById('origin').value;
+                const destination = document.getElementById('destination').value;
+                const passengers = document.getElementById('passengers').value;
+
+                resultsList.innerHTML = '';
+
+                const flights = [
+                    { id: 'AV-204', hora: '06:15 AM', clase: 'ECONÓMICA', precio: 175000 },
+                    { id: 'AV-512', hora: '12:45 PM', clase: 'EJECUTIVA', precio: 380000 }
+                ];
+
+                flights.forEach(vuelo => {
+                    const total = vuelo.precio * passengers;
+                    const card = document.createElement('div');
+                    card.className = 'flight-card';
+                    card.innerHTML = `
+                        <div class="flight-main-info">
+                            <h3>${origin.toUpperCase()} ➔ ${destination.toUpperCase()}</h3>
+                            <div class="tags-row">
+                                <span class="tag">ID: ${vuelo.id}</span>
+                                <span class="tag" style="background:#e8f5e9;color:#2e7d32">🕒 ${vuelo.hora}</span>
+                                <span class="tag" style="background:#fce4ec;color:#8C1C4C">✈️ ${vuelo.clase}</span>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <span class="amount">$${total.toLocaleString('es-CO')}</span>
+                            <button class="btn-reservar">Seleccionar</button>
+                        </div>
+                    `;
+                    resultsList.appendChild(card);
+                });
+
+                resultsSection.style.display = 'block';
+
+                // Filtrado de paquetes
+                const query = destination.toLowerCase().trim();
+                let foundCount = 0;
+                packages.forEach(pkg => {
+                    const city = pkg.querySelector('.pkg-title').textContent.toLowerCase();
+                    if (city.includes(query) || query === "") {
+                        pkg.style.display = 'flex';
+                        foundCount++;
+                    } else {
+                        pkg.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Descubre y compra</h4>
+                <ul>
+                    <li><a href="../proyecto-1/index.html" style="color: white; text-decoration: none;">Inicio</a></li>
+                    <li><a href="../proyecto-5/index.html" style="color: white; text-decoration: none;">Crear tu cuenta</a></li>
+                    <li><a href="../proyecto-1/index.html" style="color: white; text-decoration: none;">Vuelos</a></li>
+                    <li><a href="../proyecto-4/index.html" style="color: white; text-decoration: none;">Reservas</a></li>
+                    <li><a href="../proyecto-7/index.html" style="color: white; text-decoration: none;">Mis viajes</a></li>
+                    <li><a href="../proyecto-2/index.html" style="color: white; text-decoration: none;">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li>Políticas de privacidad y seguridad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nosotros</h4>
+                <p>Somos A volar Airline</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li>Servicio al cliente</li>
+                    <li>WhatsApp 3125638910</li>
+                    <li>Lineal nacional: 601234673</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Redes</h4>
+                <div class="social-icons">
+                    <div class="icon-box">f</div>
+                    <div class="icon-box">ig</div>
+                    <div class="icon-box">yt</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
