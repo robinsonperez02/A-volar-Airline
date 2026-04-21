@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la pantalla */
+    overflow-x: hidden; /* Evita desplazamientos horizontales no deseados */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1427px;
+    height: 951px;
+    max-width: 95%;
+    max-height: 90vh; /* Evita que se recorte en pantallas poco altas */
+    background: url('198d21ae-9502-48b0-8192-cb049b96fac2.jpg') no-repeat center center;
+    background-size: contain; /* Ajusta la imagen completa sin recortarla */
+    opacity: 0.3; /* Opacidad del 30% solicitada */
+    z-index: -1; /* Se coloca detrás del contenido y del login */
+    pointer-events: none; /* Permite hacer clic en los campos del login a pesar de la imagen */
+}
+
+/* Header */
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+}
+
+/* Ajuste del tamaÃ±o de la imagen */
+.logo-img {
+    height: 40px;        
+    width: auto;         
+    object-fit: contain; 
+    margin-left: 50px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 10px 20px;
+    gap: 50px; 
+}
+.airline-name {
+    color: #8C1C4C;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 270px;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap; /* Evita que los nombres largos se partan en dos lÃ­neas */
+}
+
+.nav-links a:hover {
+    color: #8C1C4C; 
+}
+
+.hero-search {
+    width: 100%;
+    background: url('fondo-busqueda.jpg') center/cover no-repeat, #f3f4f6;
+    background-attachment: fixed;
+    padding: 60px 10%;
+}
+
+.hero-search-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-search .main-title {
+    font-size: 2.8rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.hero-search .hero-subtitle {
+    font-size: 20px;
+    color: #374151;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.hero-search .search-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.feature-section {
+    background: #ffffff;
+    padding: 60px 10%;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(179, 48, 99, 0.12);
+    color: #8C1C4C;
+    font-size: 28px;
+}
+
+.feature-card h3 {
+    color: #8C1C4C;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+.feature-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.destinations-section {
+    background: #f9fafb;
+    padding: 60px 10%;
+}
+
+.destinations-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.destinations-header h2 {
+    font-size: 2rem;
+    color: #1f2937;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 28px;
+    min-height: 380px;
+    overflow: hidden;
+    background: #111827;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,23,42,0.18), rgba(15,23,42,0.92));
+    pointer-events: none;
+}
+
+.destination-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    width: 100%;
+    background: #f3f4f6;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 0 0 28px 28px;
+    justify-content: center;
+}
+
+.destination-city,
+.destination-text,
+.destination-price,
+.destination-savings {
+    color: #111827;
+    text-shadow: none;
+}
+
+.destination-savings {
+    background: rgba(0, 0, 0, 0.08);
+    color: #111827;
+}
+
+.destination-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.destination-city {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.destination-savings {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #C4A747;
+    color: #111827;
+}
+
+.destination-text {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.destination-price {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111827;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* Integración de la sección de Login */
+.login-section {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    min-height: 500px;
+}
+
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+}
+
+.login-card h2 {
+    color: #8C1C4C; 
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.signup-link {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.signup-link a {
+    color: #8C1C4C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.login-card .input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #8C1C4C;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+.login-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Estilos de Registro Integrados */
+.registration-container {
+    padding: 40px 10%;
+    background: rgba(224, 224, 224, 0.7); /* Deja ver la imagen de fondo */
+}
+
+.reg-section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.reg-section h2 {
+    color: #8C1C4C; /* Color corporativo */
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.required-hint {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.reg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.reg-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-field label {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #333;
+}
+
+.reg-field input, .reg-field select {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.reg-terms {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.btn-create-account {
+    background: #8C1C4C; /* Color corporativo */
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 1rem;
+    transition: filter 0.3s;
+}
+
+.search-tabs {
+    display: inline-flex;
+    gap: 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    padding: 8px;
+    margin-bottom: 25px;
+}
+
+.tab {
+    border: none;
+    background: transparent;
+    color: #475569;
+    padding: 12px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab.active {
+    background: #8C1C4C;
+    color: white;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-field label {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.search-field input {
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    color: #111827;
+    background: #f8fafc;
+}
+
+.search-field.passengers {
+    max-width: 120px;
+}
+
+.btn-search {
+    background: #8C1C4C;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 18px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #8C1C4C;
+    color: white;
+    padding: 40px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 35px;
+    height: 35px;
+    background: white;
+    color: #8C1C4C;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .search-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-search {
+        padding: 40px 5%;
+    }
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+    .search-field.passengers {
+        max-width: 100%;
+    }
+    .nav-links {
+        gap: 20px;
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+}
